@@ -1,0 +1,7 @@
+#!/bin/sh
+set -ue
+
+cd "$(dirname "$0")/.."
+
+brew bundle check || brew bundle
+composer install

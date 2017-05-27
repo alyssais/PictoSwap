@@ -1,0 +1,7 @@
+#!/bin/sh
+set -ue
+
+cd "$(dirname "$0")/.."
+script/bootstrap
+
+sqlite3 pictoswap.sqlite < schema.sql

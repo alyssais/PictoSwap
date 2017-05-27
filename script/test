@@ -1,0 +1,8 @@
+#!/bin/sh
+set -ue
+
+cd "$(dirname "$0")/.."
+script/update
+
+export PATH="$PWD/vendor/bin:$PATH"
+phpunit
